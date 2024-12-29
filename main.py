@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 api_id = 26541817
 api_hash = "192aa1d108342022bee4cb45e6a6be7e"
-image_dir = 'C:/Users/Computer/PycharmProjects/pythonProject1/gen'
+image_dir = 'gen/'
 num_images = 100
 ADDITIONAL_WAIT_TIME = 100
 
@@ -22,7 +22,7 @@ def generate_images(num_images, size=300, random_range=(220, 255)):
     for i in range(num_images):
         random_int = randint(random_range[0], random_range[1])
         img = np.random.randint(random_int, size=(size, size, 3), dtype=np.uint8)
-        image_path = f'C:/Users/Computer/PycharmProjects/pythonProject1/gen/image-{i}.png'
+        image_path = f'gen/image-{i}.png'
         cv2.imwrite(image_path, img)
         image_paths.append(image_path)
         print(f"Image {i} generated and saved.")
