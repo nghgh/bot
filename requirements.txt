@@ -1,0 +1,4 @@
+pyrogram
+numpy
+opencv-python
+flask
